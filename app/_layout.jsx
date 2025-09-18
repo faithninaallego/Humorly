@@ -1,14 +1,13 @@
-import { Stack } from "expo-router"
-import { StatusBar } from "expo-status-bar"
+// app/_layout.jsx
+import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <>
-      <StatusBar style="auto" />
-      <Stack>
-        <Stack.Screen name="goals" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </>
-  )
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        animation: "slide_from_right", // smooth transitions
+      }}
+    />
+  );
 }
